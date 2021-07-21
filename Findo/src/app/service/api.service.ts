@@ -19,7 +19,7 @@ export class ApiService {
     return this.http.get(this.url + '?page=' + this.pages);
   }
 
-  getEpisodeByNumber(number: number):any {
+  getEpisodeByNumber(name: string) {
     return this.episodes.find((element: any) => element.name === name);
   }
 }

@@ -1,11 +1,14 @@
 <div class="card text-black mb-3" *ngFor="let e of episodes">
-  <div class="card-header">{{e.episode}}</div>
-  <div class="card-body">
-    <h5 class="card-title">{{e.name}}</h5>
-    <p class="card-text">ID: {{e.id}}</p>
-    <p class="card-text">Air date: {{e.air_date}}</p>
-    <p class="card-text characters d-flex justify-content-end">Nº Characters: {{e.characters.length}}</p>
-    <p class="card-text">URL: {{e.url}}</p>
+  <div routerLink="/detalle/{{ e.name }}">
+    <h3 class="card-header">{{ e.episode }} - {{ e.name }}</h3>
+    <div class="card-body">
+      <p class="card-text"><b>ID:</b> {{ e.id }}</p>
+      <p class="card-text"><b>Air date:</b> {{ e.air_date }}</p>
+      <p class="card-text characters d-flex justify-content-end">
+        <b>Nº Characters: </b> {{ e.characters.length }}
+      </p>
+      <p class="card-text"><b>URL:</b> {{ e.url }}</p>
+    </div>
   </div>
 </div>
 

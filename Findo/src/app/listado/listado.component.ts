@@ -17,6 +17,10 @@ export class ListadoComponent implements OnInit {
     this.getData();
   }
 
+  goDetail() {
+    this.router.navigateByUrl('/detalle');
+  }
+
   getData() {
     this.apiService.getEpisodes().subscribe(
       (response) => {

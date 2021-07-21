@@ -1,1 +1,15 @@
-<p>details works!</p>
+<button class="btn btn-primary" type="button" (click)="goBack()">
+  Go back
+</button>
+
+<div class="container">
+  <div class="list-group" *ngIf="episode">
+    <h4 class="justify-content-start">{{ episode.name }}</h4>
+    <p class="col-4 aling-self-center">ID: {{ episode.id }}</p>
+    <small class="col-4 aling-self-send">{{ episode.episode }}</small>
+
+    <p class="mb-1">{{ episode.air_date }}</p>
+    <h4>Characters</h4>
+    <p class="col-4 justify-content-right"> </p>
+  </div>
+</div>
