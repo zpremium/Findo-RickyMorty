@@ -1,18 +1,18 @@
-<div class="container">
-  <div class="row">
-    <div class="info" *ngFor="let e of episodes">
-      <h1>{{ e.name }}</h1>
-      <p>ID: {{e.id}}</p>
-      <p>Air Date: {{e.air_date}}</p>
-      <p>URL:{{e.url}}</p>
-      <p>Nº Characters: {{e.characters}}</p>
-      <hr />
-    </div>
-
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" (click)='getData()'>More Episodes</a></li>
-      </ul>
-    </nav>
+<div class="card text-black mb-3" *ngFor="let e of episodes">
+  <div class="card-header">{{e.episode}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{e.name}}</h5>
+    <p class="card-text">ID: {{e.id}}</p>
+    <p class="card-text">Air date: {{e.air_date}}</p>
+    <p class="card-text characters d-flex justify-content-end">Nº Characters: {{e.characters.length}}</p>
+    <p class="card-text">URL: {{e.url}}</p>
   </div>
 </div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" (click)="getData()">More Episodes</a>
+    </li>
+  </ul>
+</nav>
