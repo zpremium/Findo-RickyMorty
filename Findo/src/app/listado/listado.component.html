@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="info" *ngFor="let e of episodes">
+      <h1>{{ e.name }}</h1>
+      <p>ID: {{e.id}}</p>
+      <p>Air Date: {{e.air_date}}</p>
+      <p>URL:{{e.url}}</p>
+      <p>Nº Characters: {{e.characters}}</p>
+      <hr />
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" (click)='getData()'>More Episodes</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
