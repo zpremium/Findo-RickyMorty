@@ -4,12 +4,16 @@
 
 <div class="container">
   <div class="list-group" *ngIf="episode">
-    <h4 class="justify-content-start">{{ episode.name }}</h4>
-    <p class="col-4 aling-self-center">ID: {{ episode.id }}</p>
-    <small class="col-4 aling-self-send">{{ episode.episode }}</small>
+    <h4 class="justify-content-start"><b>Name: </b>{{ episode.name }}</h4>
 
-    <p class="mb-1">{{ episode.air_date }}</p>
+    <p><b>ID: </b> {{ episode.id }}</p>
+    <p><b>Air date: </b> {{ episode.air_date }}</p>
+    <p><b>Nº Characters: </b> {{ episode.characters.length }}</p>
+    <p><b>URL: </b> {{ episode.url }}</p>
+
     <h4>Characters</h4>
-    <p class="col-4 justify-content-right"> </p>
+    <p class="col-4">
+      {{ episode.characters}}
+    </p>
   </div>
 </div>

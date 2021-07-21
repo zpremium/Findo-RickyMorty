@@ -33,9 +33,11 @@ export class ListadoComponent implements OnInit {
       (error) => {
         console.log(error);
       }
-    );console.log(this.episodes);
+    );
 
   }
+
+
 
 
 
