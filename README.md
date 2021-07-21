@@ -1,8 +1,21 @@
-PruebaTecnicaFindo
-This project was generated with Angular CLI version 12.1.1.
 
-Tareas
-Coger y mostrar lista de episodios.
+# Rick and Morty Api
 
-Api
-utilice la api: https://rickandmortyapi.com/
+Rick and Morty web where you can see all the episodes information
+
+
+## API Reference
+
+#### Get item
+
+```http
+  GET https://rickandmortyapi.com/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+
+
+  
